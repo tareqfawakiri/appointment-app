@@ -40,7 +40,7 @@ class SendSmsJob implements ShouldQueue
             $list = json_decode($redis->get('list'), true);
 
         $arr = [
-            'api_key' => '1584.66CBFA022A3618B699303AB9D82861E2',
+            'api_key' => env('SMS_KEY'),
             'sender_id' => '1',
             'send_type' => '2',
             'sms_content' => $this->body,
